@@ -1,0 +1,33 @@
+/* Custom CSS for the login page */
+
+/* Flexbox layout to align items */
+.row {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Place the image on the left side */
+  .col-md-9 {
+    order: 1; /* Reverse the order of this column on medium-sized screens and larger */
+  }
+  
+  /* Place the form on the right side */
+  .col-md-8 {
+    order: 2; /* Reverse the order of this column on medium-sized screens and larger */
+  }
+  
+  /* Add some spacing between the image and form on larger screens */
+  @media (min-width: 768px) {
+    .col-md-9 {
+      margin-right: 30px;
+    }
+  }
+  
+/* Custom CSS for the section with black background */
+.section-black {
+    background-color: rgb(0, 0, 0);
+    color: white; /* Set the text color to white for better visibility */
+  }
+
+
+  

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Welcome to JobShala!</title>
+    <style>
+        /* CSS to set a fixed height for the images */
+        .portfolio-img {
+          height: 300px; /* Adjust the height as per your preference */
+        }
+
+        /* CSS to limit the height of the description */
+  .portfolio-description {
+    max-height: 150px; /* Adjust the height as per your preference */
+    overflow: hidden; /* Hide the overflow */
+  }
+      </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">JobShala</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            
+            <a href="/login" class="btn btn-secondary mr-sm-2">Login</a>
+            <a href="/register" class="btn btn-outline-secondary my-2 my-sm-0">Register</a>
+          </form>
+          
+    </div>
+</nav>
+
+<section class="vh-100 d-flex align-items-center justify-content-center bg-dark">
+    <div class="container text-center">
+        <h2 class="heading-xlarge mb-4" style="color: rgb(255, 255, 255); font-family: var(--head-fontFamily); font-weight: var(--head-fontWeight);">
+            Find Your Dream Job!
+        </h2>
+        <p class="body-large mb-5" style="color: rgb(255, 255, 255); font-family: var(--body-fontFamily); font-weight: var(--body-fontWeight);">
+            Discover opportunities with JobShala's recruitment services.
+        </p>
+        <a class="btn btn-secondary btn-lg" target="_self" href="/jobs" style="font-family: var(--body-fontFamily); font-weight: var(--body-fontWeight);">
+            Apply
+        </a>
+    </div>
+</section>
+
+<section class="vh-100 d-flex align-items-center justify-content-center section-black">
+    <div class="container">
+        <div class="row">
+            <!-- Image column -->
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/image1.jpg') }}" class="img-fluid" alt="Image">
+            </div>
+
+            <!-- About Us column -->
+            <div id = "about" class="col-md-6">
+                <h2 class="heading-xlarge mb-4" style="color: rgb(255, 255, 255); font-family: var(--head-fontFamily); font-weight: var(--head-fontWeight);">
+                    About Us
+                </h2>
+                <p class="body-large" style="color: rgb(255, 255, 255); font-family: var(--body-fontFamily); font-weight: var(--body-fontWeight);">
+                    At JobShala, we are a leading recruiting firm with a mission to connect top-notch talent with innovative companies worldwide. We take pride in being at the forefront of shaping the future of recruitment, and our primary focus is on hiring exceptional software engineers, product managers, data scientists, and other tech professionals both within India and across the globe.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="portfolio" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Diverse Portfolio</h2>
+      <div class="row">
+        <!-- Point 1 -->
+        <div class="col-md-6 order-md-first">
+          <img src="{{ url_for('static', filename='images/software_engineer.jpg') }}" class="img-fluid mb-4 portfolio-img" alt="Software Engineers">
+          <h3>Software Engineers</h3>
+          <p class="portfolio-description">We specialize in finding software engineers with a passion for coding and a deep understanding of cutting-edge technologies. Our pool of talent ranges from fresh graduates with potential to seasoned experts with a proven track record.</p>
+        </div>
+  
+        <!-- Point 2 -->
+        <div class="col-md-6 order-md-last">
+          <img src="{{ url_for('static', filename='images/product_manager.jpg') }}" class="img-fluid mb-4 portfolio-img" alt="Product Managers">
+          <h3>Product Managers</h3>
+          <p class="portfolio-description">For organizations seeking visionary leaders to drive product development, we present a curated selection of product managers skilled in translating ideas into reality.</p>
+        </div>
+  
+        <!-- Point 3 -->
+        <div class="col-md-6 order-md-first">
+          <img src="{{ url_for('static', filename='images/data_scientist.jpg') }}" class="img-fluid mb-4 portfolio-img" alt="Data Scientists">
+          <h3>Data Scientists</h3>
+          <p class="portfolio-description">Data is the new gold, and we are adept at identifying data scientists who can unlock its true potential, making data-driven decisions that lead to strategic advancements.</p>
+        </div>
+  
+        <!-- Point 4 -->
+        <div class="col-md-6 order-md-last">
+          <img src="{{ url_for('static', filename='images/tech_innovator.jpg') }}" class="img-fluid mb-4 portfolio-img" alt="Tech Innovators">
+          <h3>Tech Innovators</h3>
+          <p class="portfolio-description">Our roster includes tech innovators who possess the ability to revolutionize industries with their creativity and forward-thinking ideas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Contact Us</h2>
+          <p>Interested in working together or need to find top talent for your organization? Reach out to us using the contact details below:</p>
+          <ul class="list-unstyled">
+            <li><strong>Address:</strong> 64 JobShala Street, New Delhi, India</li>
+            <li><strong>Email:</strong> info@jobshala.com</li>
+            <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+            <form method="post" action="{{ url_for('submit_message') }}" onsubmit="showMessage()">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-light">Send Message</button>
+              </form>              
+        </div>
+      </div>
+    </div>
+  </section>
+    
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    function showMessage() {
+      alert('Your message has been sent. Thank you!');
+    }
+  </script>  
+
+</body>
+</html>

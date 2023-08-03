@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        h1{
+            color:#ddd
+        } 
+        
+        h2 {
+            color: #222;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        li strong {
+            font-size: 1.2em;
+            color: #222;
+        }
+
+        li small {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #333; color: #fff; text-align: center; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center;">
+        <h1 style="margin: 0;">JobShala</h1>
+        <p style="margin: 0 10px;">Your One-Stop Job Portal</p>
+    </div>
+    <div>
+        {% if user_authenticated %}
+            <button class="styled-button" onclick="window.location.href='/logout'">Logout</button>
+        {% else %}
+            <button class="styled-button" onclick="window.location.href='/login'">Login</button>
+        {% endif %}
+    </div>
+</header>
+<style>
+    .styled-button {
+        border: none;
+        background-color: #000;
+        color: #fff;
+        border-radius: 20px;
+        padding: 8px 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .styled-button:hover {
+        background-color: #ddd;
+        color:#000
+    }
+</style>
+
+    <h1 style="color:#222">Job Listings</h1>
+  
+    {% for category, jobs in categorized_jobs.items() %}
+        <section>
+            <h2>{{ category }}</h2>
+            <ul>
+                {% for job in jobs %}
+                    <li>
+                        <div>
+                            <strong>{{ job[3] }}</strong><br>
+                            {{ job[2] }} | {{ job[5] }} | {{ job[6] }}<br>
+                            Posted {{ time_ago(job[7]) }} 
+                        </div>
+                        <button class="apply-button" onclick="window.location.href='/job/{{ job[0] }}'">Apply</button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        h1 {
+            color: #ddd;
+        }
+
+        .job-description {
+            margin: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #333; color: #fff; text-align: center; padding: 10px;">
+        <h1>JobShala</h1>
+        <p>Your One-Stop Job Portal</p>
+    </header>
+
+    <div class="job-description">
+        <h1 style="color:#222">{{ job[3] }}</h1>
+        <p>Company: {{ job[2] }}</p>
+        <p>Location: {{ job[5] }}</p>
+        <p>Salary: {{ job[6] }}</p>
+        <p>Posted {{ time_ago(job[7]) }}</p>
+        <p>{{ job[4]| safe }}</p>
+    </div>
+</body>
+</html>
