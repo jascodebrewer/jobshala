@@ -23,6 +23,22 @@ JobShala is a web-based application that simplifies job listing management, user
 - Dynamic job categorization
 - Contact form for user inquiries
 
+## Installation
+
+To set up and run the JobShala application on your local machine, follow these steps:
+
+1. Clone this repository: git clone https://github.com/jascodebrewer/jobshala.git
+2. Navigate to the project directory: cd jobshala
+3. Install required dependencies: pip install -r requirements.txt
+4. Configure the MySQL database settings in app.py
+5. Run the application: python app.py
+
+## Usage
+* Access the application at http://localhost:5000
+* Register as a user or log in if you already have an account
+* Browse job listings, apply for jobs, and explore the features
+* Users can submit inquiries using the contact form
+
 ## Database Tables
 
 ### Jobs Table
@@ -60,18 +76,3 @@ CREATE TABLE contactform (
 );
 
 
-## Installation
-
-To set up and run the JobShala application on your local machine, follow these steps:
-
-1. Clone this repository: git clone https://github.com/jascodebrewer/jobshala.git
-2. Navigate to the project directory: cd jobshala
-3. Install required dependencies: pip install -r requirements.txt
-4. Configure the MySQL database settings in app.py
-5. Run the application: python app.py
-
-## Usage
-* Access the application at http://localhost:5000
-* Register as a user or log in if you already have an account
-* Browse job listings, apply for jobs, and explore the features
-* Users can submit inquiries using the contact form
